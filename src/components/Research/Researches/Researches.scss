@@ -1,0 +1,7 @@
+.researches {
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}

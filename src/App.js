@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Faq from "./components/Faq/Faq";
+import User from "./components/User/User";
+import Login from "./components/Login/Login";
+import Index from "./components/Index/Index";
+import Logout from "./components/Logout/Logout";
+import Layout from "./components/Layout/Layout";
+import Support from "./components/Support/Support";
+import Research from "./components/Research/Research";
 
-function App() {
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Index state={props.state.indexPage} />} />
+          <Route path="support" element={<Support />} />
+          <Route
+            path="research/*"
+            element={<Research state={props.state.researchesPage} />}
+          />
+          <Route
+            path="user"
+            element={
+              <User
+                state={props.state.userPage}
+                changeUserInfo={props.changeUserInfo}
+              />
+            }
+          />
+          <Route path="faq" element={<Faq />} />
+          <Route path="login" element={<Login />} />
+          <Route path="logout" element={<Logout />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,108 @@
+.user {
+    color: #498783;
+    & h1 {
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 33px;
+        margin: 0px 0px 50px;
+    }
+    &__row {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__img {
+        position: relative;
+        width: 270px;
+        height: 270px;
+        overflow: hidden;
+        border-radius: 50%;
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        flex: 0 1 600px;
+
+        &.edit {
+            & p {
+                flex: 1 1 auto;
+            }
+            & p.hidden {
+                display: none;
+            }
+            & input {
+                display: block;
+                border-radius: 90px;
+                border: 2px solid #498783;
+                background: #fff;
+                height: 33px;
+                width: 100%;
+                font-size: 18px;
+                color: #498783;
+                padding: 6px 26px;
+                width: 350px;
+            }
+            & .btn-save {
+                display: flex;
+            }
+            & .btn-change {
+                display: none;
+            }
+        }
+
+        & .btn-change {
+            display: flex;
+        }
+        & .btn-save {
+            display: none;
+        }
+    }
+    &__characteristic {
+        display: flex;
+        gap: 6px;
+
+        & p {
+            font-size: 20px;
+            line-height: 31px;
+        }
+        & p:first-child {
+            font-weight: 600;
+        }
+        & input {
+            display: none;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        height: 40px;
+        border-radius: 90px;
+        border: 2px solid #498783;
+        background: #fff;
+        color: #498783;
+        text-align: center;
+        padding: 9px 0px;
+        transition: all 300ms ease-in;
+        font-size: 18px;
+
+        &:hover {
+            background: #498783;
+            color: #fff;
+        }
+    }
+}

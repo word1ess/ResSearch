@@ -1,0 +1,92 @@
+@import "./variable.scss";
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1 1 auto;
+    margin: 0 auto;
+    z-index: 1000;
+    max-width: calc($container + $padding-container * 2);
+    height: 100%;
+    padding: 0px $padding-container;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    padding: 20px 0px;
+    flex: 1 1 auto;
+}
+
+.footer {
+    background: $regular;
+    height: 80px;
+}
+
+a {
+    color: $brand;
+}
+
+.link-bg {
+    display: block;
+    position: relative;
+    transition: all 300ms ease 0ms;
+    z-index: 3;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0px;
+        width: 100%;
+        height: 10px;
+        background: rgba(73, 135, 131, 0.3);
+        z-index: 2;
+        transition: all 300ms ease 0ms;
+    }
+
+    &:hover {
+        &::after {
+            height: calc(100% + 5px);
+        }
+    }
+}
+
+section.bg {
+    background: $brand;
+    color: #fff;
+
+    a {
+        color: #fff;
+    }
+    .link-bg {
+        display: block;
+        position: relative;
+        transition: all 300ms ease 0ms;
+        z-index: 3;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0px;
+            width: 100%;
+            height: 10px;
+            background: rgba(200, 218, 217, 0.5);
+            z-index: 2;
+            transition: all 300ms ease 0ms;
+        }
+
+        &:hover {
+            &::after {
+                height: calc(100% + 5px);
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import "../../variable.scss";
+.header {
+    height: 91px;
+    position: relative;
+    background-color: $secondary;
+    padding: 29px 0px 34px;
+    &__row {
+        display: flex;
+        height: 100%;
+    }
+    &__logo {
+        flex: 0 0 195px;
+        width: 195px;
+        margin: 0px 60px 0px 0px;
+    }
+    &__links {
+        display: flex;
+        flex: 1 1 auto;
+        gap: 40px;
+        justify-content: flex-end;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+
+        & a {
+            font-size: 20px;
+            color: $brand;
+        }
+    }
+}
