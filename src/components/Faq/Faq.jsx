@@ -2,7 +2,7 @@ import "./Faq.scss";
 const Faq = () => {
   return (
     <div>
-      <h2>Faq</h2>
+      <h2>Здесь будет форма с вопросами</h2>
     </div>
   );
 };
