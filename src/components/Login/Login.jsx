@@ -2,7 +2,7 @@ import "./Login.scss";
 const Login = () => {
   return (
     <div>
-      <h2>Login</h2>
+      <h2>Страница для входа</h2>
     </div>
   );
 };
