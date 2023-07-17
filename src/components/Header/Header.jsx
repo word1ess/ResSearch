@@ -22,7 +22,10 @@ const Header = () => {
               <NavLink to="support">Поддержка</NavLink>
             </li>
             <li className="header__link">
-              <NavLink to="user">Войти</NavLink>
+              <NavLink to="user">Профиль</NavLink>
+            </li>
+            <li className="header__link">
+              <NavLink to="login">Войти</NavLink>
             </li>
           </ul>
         </div>

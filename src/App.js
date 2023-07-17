@@ -7,6 +7,7 @@ import Logout from "./components/Logout/Logout";
 import Layout from "./components/Layout/Layout";
 import Support from "./components/Support/Support";
 import Research from "./components/Research/Research";
+import Register from "./components/Register/Register";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -33,6 +34,7 @@ const App = (props) => {
           <Route path="faq" element={<Faq />} />
           <Route path="login" element={<Login />} />
           <Route path="logout" element={<Logout />} />
+          <Route path="register" element={<Register />} />
         </Route>
       </Routes>
     </BrowserRouter>
