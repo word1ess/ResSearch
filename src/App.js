@@ -6,10 +6,13 @@ import Index from "./components/Index/Index";
 import Logout from "./components/Logout/Logout";
 import Layout from "./components/Layout/Layout";
 import Support from "./components/Support/Support";
-import Research from "./components/Research/Research";
+import AllResearches from "./components/Research/AllResearches";
 import Register from "./components/Register/Register";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AddReseach from "./components/Research/Researches/Research/AddReseach/AddReseach";
+import EditReseach from "./components/Research/Researches/Research/EditReseach/EditReseach";
+import MyResearches from "./components/Research/MyReseaches";
 
 const App = (props) => {
   return (
@@ -20,7 +23,11 @@ const App = (props) => {
           <Route path="support" element={<Support />} />
           <Route
             path="research/*"
-            element={<Research state={props.state.researchesPage} />}
+            element={<AllResearches state={props.state.researchesPage} />}
+          />
+          <Route
+            path="research/my"
+            element={<MyResearches state={props.state.researchesPage} />}
           />
           <Route
             path="user"
@@ -35,6 +42,8 @@ const App = (props) => {
           <Route path="login" element={<Login />} />
           <Route path="logout" element={<Logout />} />
           <Route path="register" element={<Register />} />
+          <Route path="add" element={<AddReseach />} />
+          <Route path="edit" element={<EditReseach />} />
         </Route>
       </Routes>
     </BrowserRouter>

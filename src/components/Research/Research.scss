@@ -1,3 +1,4 @@
+
 .content {
     &.bg {
         background: #dbdcdc;
@@ -9,4 +10,46 @@
         overflow: hidden;
         flex: 1 1 auto;
     }
+    & .filters__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    & .filters {
+        margin-left: 93px;
+        display: flex;
+        flex-direction: row;
+        & p {
+            height: 50px;
+            border-radius: 90px;
+            background: #FFF;
+            padding: 15px;
+            width: auto;
+            margin-right: 15px;
+            color: #498783;
+            text-align: center;
+            font-family: Open Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px; /* 100% */
+            cursor: pointer;
+        }
+
+        & .active {
+            background: #A4C3C1;
+            color: #FFF;
+            text-align: center;
+            font-family: Open Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px; /* 100% */
+        }
+    }
+
+    
 }
+
+

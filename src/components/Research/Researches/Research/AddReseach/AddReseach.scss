@@ -1,0 +1,171 @@
+.add {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    background: #FFF;
+    width: 1090px;
+    height: 895px;
+    /* justify-content: center;
+    align-items: center; */
+    color: #498783;
+
+    &__btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 35px;
+
+        & .back {
+            width: 130px;
+            height: 50px;
+            border-radius: 90px;
+            background: #A4C3C1;
+            background-image: url(../../../../../../public/image/svgicons/back.png);
+            background-repeat: no-repeat;
+            background-position: 15px 50%;
+            color: #FFF;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 28px;
+            /* 140% */
+        }
+
+        & .save {
+            width: 168px;
+            height: 50px;
+            border-radius: 90px;
+            background: #498783;
+            color: #FFF;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 28px;
+            /* 140% */
+        }
+    }
+
+    & h1 {
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 33px;
+        margin: 0px 35px 25px;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding-left: 35px;
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 15px;
+
+        & label {
+            color: #498783;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 18px;
+            width: 147px;
+        }
+
+        & input {
+            border-radius: 90px;
+            border: 2px solid #498783;
+            background: #FFF;
+            height: 40px;
+            margin-left: 18px;
+            color: rgba(73, 135, 131, 0.50);
+            padding-left: 15px;
+            font-family: Open Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 31px; /* 172.222% */
+        }
+
+        & .name {
+            width: 600px;
+        }
+
+        & .length, .status {
+            width: 230px;
+        }
+
+        &__requirements {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 15px;
+
+            & label {
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 18px;
+                width: 147px;
+            }
+        }
+
+        & .gender, .education, .age {
+            width: 162px;
+        }
+
+        & .city {
+            width: 265px;
+        }
+
+        & textarea {
+            border-radius: 20px;
+            border: 2px solid #498783;
+            background: #FFF;
+            width: 600px;
+            height: 360px;
+            margin-left: 18px;
+            color: rgba(73, 135, 131, 0.50);
+            padding-left: 15px;
+            font-family: Open Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 31px; /* 172.222% */
+        }
+
+        & select {
+            border-radius: 90px;
+            border: 2px solid #498783;
+            background: #FFF;
+            height: 40px;
+            margin-left: 18px;
+            color: rgba(73, 135, 131, 0.50);
+            padding-left: 15px;
+            font-family: Open Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 31px; /* 172.222% */
+            
+        }
+    }
+}
+
+.stages {
+    &__title {
+        display: flex;
+        margin: 22px 35px 10px;
+        & h2 {
+            color: #498783;
+            font-family: Open Sans;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 31px; /* 110.714% */
+            margin-right: 10px;
+        }
+    }
+}
