@@ -9,6 +9,7 @@ const MyResearches = (props) => {
     <main className="content bg">
       <section className="searching">
         <div className="container">
+          <h1>Мои исследования</h1>
           <div className="searching__row">
             <form className="searching__form" action="#">
               <input
@@ -33,8 +34,7 @@ const MyResearches = (props) => {
           <p>Заверешнные</p>
           <p>Архив</p>
         </div>
-        <NavLink to="/add">Создать</NavLink>
-        {/* <img src="image/svgicons/plus.svg" alt="+" onClick={() => {}}/> */}
+        <NavLink to="/add" className="add-btn" />
       </div>
 
       <Researches researches={props.state.researches}></Researches>

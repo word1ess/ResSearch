@@ -1,6 +1,7 @@
 import "./Research.scss";
 import React from "react";
 const Research = (props) => {
+  console.log(props)
   let widthForCount = (props.count * 100) / props.maxCount;
   let researchCountWidth = React.createRef();
   let research = React.createRef();
@@ -57,10 +58,15 @@ const Research = (props) => {
           </div>
           <div className="research-page__property">
             <h4>Требования к участникам</h4>
-            <p></p>
+            <div className="research-page__property__items">
+              <p>{props.requirements.gender}</p>
+              <p>{props.requirements.age}</p>
+              <p>{props.requirements.city}</p>
+              <p>{props.requirements.education}</p>
+            </div>
           </div>
           <div className="research-page__property">
-            <h4>Количество участников:</h4>
+            <h4>Количество участников</h4>
             <p>
               {props.count}/{props.maxCount}
             </p>
