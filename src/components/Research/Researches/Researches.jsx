@@ -11,6 +11,7 @@ const Researches = (props) => {
         image={research.image}
         date={research.date}
         duration={research.duration}
+        requirements={research.requirements}
         text={research.text}
         count={research.countOfRespondents}
         maxCount={research.maxCountOfRespondents}

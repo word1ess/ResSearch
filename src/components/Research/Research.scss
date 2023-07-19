@@ -4,6 +4,15 @@
         background: #dbdcdc;
     }
 
+    & h1 {
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 33px;
+        color: #498783;
+        margin-bottom: 20px;
+        /* margin: 0px 35px 25px; */
+    }
+
     &__main {
         padding: 0px 32px 32px;
         border-radius: 21px;
@@ -14,17 +23,18 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin: 0 93px;
     }
 
     & .filters {
-        margin-left: 93px;
+        /* margin-left: 93px; */
         display: flex;
         flex-direction: row;
         & p {
             height: 50px;
             border-radius: 90px;
             background: #FFF;
-            padding: 15px;
+            padding: 15px ;
             width: auto;
             margin-right: 15px;
             color: #498783;
@@ -47,8 +57,14 @@
             font-weight: 400;
             line-height: 18px; /* 100% */
         }
-    }
 
+        
+    }
+    & .add-btn {
+        width: 50px;
+        height: 50px;
+        background: url(../../../public/image/svgicons/add.svg);
+    }
     
 }
 
