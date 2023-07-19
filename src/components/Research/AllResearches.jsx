@@ -3,7 +3,7 @@ import Searching from "./Searching/Searching";
 import Filters from "./Filters/Filters";
 import Researches from "./Researches/Researches";
 
-const Research = (props) => {
+const AllResearches = (props) => {
   console.log(props);
   return (
     <main className="content bg">
@@ -14,4 +14,4 @@ const Research = (props) => {
   );
 };
 
-export default Research;
+export default AllResearches;

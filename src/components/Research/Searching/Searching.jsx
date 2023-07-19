@@ -18,7 +18,7 @@ const Searching = (props) => {
               <img src="image/svgicons/search.svg" alt="search" />
             </button>
           </form>
-          <NavLink to={``} className="searching__link">
+          <NavLink to="my" className="searching__link">
             Мои исследования
           </NavLink>
         </div>
