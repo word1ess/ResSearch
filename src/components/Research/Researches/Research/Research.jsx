@@ -65,7 +65,7 @@ const Research = (props) => {
               {props.count}/{props.maxCount}
             </p>
           </div>
-          <button className="research-page__btn">Учавствовать</button>
+          <button className="research-page__btn">Участвовать</button>
         </div>
       </div>
     </>

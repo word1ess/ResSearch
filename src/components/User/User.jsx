@@ -31,15 +31,31 @@ const User = (props) => {
   };
   return (
     <>
-      <main className="content">
+      <main className="content bg">
         <section className="user">
           <div className="container">
-            <h1>Личный кабинет</h1>
             <div className="user__row">
               <div className="user__img">
                 <img src={props.state.userInfo.image} alt="" />
               </div>
               <div ref={userInfo} className="user__info">
+                <header className="user__header">
+                  <h1>Профиль</h1>
+                  <button
+                    onClick={clickUserChange}
+                    className="user__btn btn-change"
+                    ref={userChange}
+                  >
+                    <img src="/image/svgicons/edit.svg" alt="" />
+                  </button>
+                  <button
+                    onClick={clickUserSave}
+                    className="user__btn btn-save"
+                    ref={userSave}
+                  >
+                    <img src="/image/svgicons/save.svg" alt="" />
+                  </button>
+                </header>
                 <div className="user__characteristic">
                   <p>Имя пользователя</p>
                   <p className="hidden">{props.state.userInfo.userName}</p>
@@ -54,7 +70,7 @@ const User = (props) => {
                   <p>Дата рождения</p>
                   <p className="hidden">{props.state.userInfo.birthDay}</p>
                   <input
-                    type="text"
+                    type="date"
                     className="user__input"
                     ref={birthDay}
                     placeholder={props.state.userInfo.birthDay}
@@ -70,15 +86,28 @@ const User = (props) => {
                     placeholder={props.state.userInfo.sex}
                   />
                 </div>
-                <div className="user__characteristic">
-                  <p>Место жительства</p>
-                  <p className="hidden">{props.state.userInfo.country}</p>
-                  <input
-                    type="text"
-                    className="user__input"
-                    ref={country}
-                    placeholder={props.state.userInfo.country}
-                  />
+                <div className="user__characteristic column">
+                  <p className="no-flex">Место жительства</p>
+                  <div className="flex">
+                    <p>Субъект</p>
+                    <p className="hidden">{props.state.userInfo.country}</p>
+                    <input
+                      type="text"
+                      className="user__input"
+                      ref={country}
+                      placeholder={props.state.userInfo.country}
+                    />
+                  </div>
+                  <div className="flex">
+                    <p>Город</p>
+                    <p className="hidden">{props.state.userInfo.country}</p>
+                    <input
+                      type="text"
+                      className="user__input"
+                      ref={country}
+                      placeholder={props.state.userInfo.country}
+                    />
+                  </div>
                 </div>
                 <div className="user__characteristic">
                   <p>Образование</p>
@@ -110,20 +139,6 @@ const User = (props) => {
                     placeholder={props.state.userInfo.email}
                   />
                 </div>
-                <button
-                  onClick={clickUserChange}
-                  className="user__btn btn-change"
-                  ref={userChange}
-                >
-                  Изменить данные
-                </button>
-                <button
-                  onClick={clickUserSave}
-                  className="user__btn btn-save"
-                  ref={userSave}
-                >
-                  Сохранить данные
-                </button>
               </div>
             </div>
           </div>

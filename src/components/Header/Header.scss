@@ -24,9 +24,28 @@
         align-items: center;
 
         & a {
+            position: relative;
             font-size: 20px;
             color: $brand;
+            transition: all 300ms ease 0ms;
+
+            &::after {
+                transition: all 300ms ease 0ms;
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 0px;
+                right: 0px;
+                top: auto;
+                height: 5px;
+                background: transparent;
+            }
         }
 
+        & a.active {
+            &::after {
+                background: #769e9c93;
+            }
+        }
     }
 }

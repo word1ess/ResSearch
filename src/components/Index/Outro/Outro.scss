@@ -37,16 +37,21 @@
         z-index: 2;
         background: #fff;
         padding: 38px 25px 38px 21px;
-        max-width: 500px;
+        max-width: 560px;
+        width: 560px;
         top: 60px;
         left: 0px;
         align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+        border-radius: 30px;
 
         & p {
             color: #498783;
             font-size: 18px;
             font-weight: 600;
             line-height: 35px;
+            max-width: 300px;
         }
     }
 }
