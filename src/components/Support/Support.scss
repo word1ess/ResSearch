@@ -2,19 +2,19 @@
     display: flex;
     flex-direction: column;
     border-radius: 30px;
-    background: #FFF;
+    background: #fff;
     width: 650px;
     height: 600px;
     justify-content: center;
     align-items: center;
     color: #498783;
+    margin: 0 auto;
 
     & h1 {
         font-size: 36px;
         font-weight: 800;
         line-height: 33px;
         margin: 20px 0px 25px;
-
     }
 
     &__inputs {
@@ -42,7 +42,7 @@
             margin-left: 20px;
 
             & span {
-                color: #C95B4C;
+                color: #c95b4c;
             }
         }
 
@@ -56,7 +56,7 @@
             font-size: 18px;
             color: #498783;
             padding: 6px 26px;
-            width: 330px; 
+            width: 330px;
         }
 
         & textarea {
@@ -69,7 +69,7 @@
             font-size: 18px;
             color: #498783;
             padding: 6px 26px;
-            width: 330px; 
+            width: 330px;
         }
     }
 
@@ -77,8 +77,8 @@
         width: 155px;
         height: 50px;
         border-radius: 90px;
-        background: #A4C3C1;
-        color: #FFF;
+        background: #a4c3c1;
+        color: #fff;
         font-size: 20px;
         font-style: normal;
         font-weight: 600;

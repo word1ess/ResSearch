@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Respondent.scss";
 
 const Respondent = (props) => {
@@ -16,9 +17,9 @@ const Respondent = (props) => {
               <li>Иметь дополнительный источник дохода</li>
             </ul>
           </div>
-          <a href="#" className="respondent__link link-bg">
+          <NavLink to="register" className="respondent__link link-bg">
             Стать участником
-          </a>
+          </NavLink>
         </div>
       </div>
     </section>

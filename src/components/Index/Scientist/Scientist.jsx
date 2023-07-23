@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Scientist.scss";
 
 const Scientist = (props) => {
@@ -15,9 +16,9 @@ const Scientist = (props) => {
               протестировать продукт или даже привить себе новую привычку.
             </p>
           </div>
-          <a href="#" className="scientist__link link-bg">
+          <NavLink to="register" className="respondent__link link-bg">
             Стать исследователем
-          </a>
+          </NavLink>
         </div>
       </div>
     </section>

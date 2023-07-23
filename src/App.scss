@@ -15,6 +15,7 @@
     z-index: 1000;
     max-width: calc($container + $padding-container * 2);
     height: 100%;
+    width: 100%;
     padding: 0px $padding-container;
 }
 .content {
@@ -27,8 +28,7 @@
 }
 
 .footer {
-    background: $regular;
-    height: 80px;
+    background: $brand;
 }
 
 a {

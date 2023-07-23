@@ -26,15 +26,17 @@ const MyResearches = (props) => {
           </div>
         </div>
       </section>
-      <div className="filters__block">
-        <div className="filters">
-          <p className="active">Все</p>
-          <p>Актуальные</p>
-          <p>Скрытые</p>
-          <p>Заверешнные</p>
-          <p>Архив</p>
+      <div className="container">
+        <div className="filters__block">
+          <div className="filters">
+            <p className="active">Все</p>
+            <p>Актуальные</p>
+            <p>Скрытые</p>
+            <p>Заверешнные</p>
+            <p>Архив</p>
+          </div>
+          <NavLink to="/add" className="add-btn" />
         </div>
-        <NavLink to="/add" className="add-btn" />
       </div>
 
       <Researches researches={props.state.researches}></Researches>

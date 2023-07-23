@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: column;
     border-radius: 30px;
-    background: #FFF;
+    background: #fff;
     width: 1090px;
     height: 895px;
     /* justify-content: center;
     align-items: center; */
     color: #498783;
+    margin: 0 auto;
 
     &__btns {
         display: flex;
@@ -19,11 +20,11 @@
             width: 130px;
             height: 50px;
             border-radius: 90px;
-            background: #A4C3C1;
+            background: #a4c3c1;
             background-image: url(../../../../../../public/image/svgicons/back.png);
             background-repeat: no-repeat;
             background-position: 15px 50%;
-            color: #FFF;
+            color: #fff;
             font-size: 20px;
             font-style: normal;
             font-weight: 600;
@@ -36,7 +37,7 @@
             height: 50px;
             border-radius: 90px;
             background: #498783;
-            color: #FFF;
+            color: #fff;
             font-size: 20px;
             font-style: normal;
             font-weight: 600;
@@ -77,10 +78,10 @@
         & input {
             border-radius: 90px;
             border: 2px solid #498783;
-            background: #FFF;
+            background: #fff;
             height: 40px;
             margin-left: 18px;
-            color: rgba(73, 135, 131, 0.50);
+            color: rgba(73, 135, 131, 0.5);
             padding-left: 15px;
             font-family: Open Sans;
             font-size: 18px;
@@ -93,7 +94,8 @@
             width: 600px;
         }
 
-        & .length, .status {
+        & .length,
+        .status {
             width: 230px;
         }
 
@@ -112,7 +114,9 @@
             }
         }
 
-        & .gender, .education, .age {
+        & .gender,
+        .education,
+        .age {
             width: 162px;
         }
 
@@ -123,11 +127,11 @@
         & textarea {
             border-radius: 20px;
             border: 2px solid #498783;
-            background: #FFF;
+            background: #fff;
             width: 600px;
             height: 360px;
             margin-left: 18px;
-            color: rgba(73, 135, 131, 0.50);
+            color: rgba(73, 135, 131, 0.5);
             padding-left: 15px;
             font-family: Open Sans;
             font-size: 18px;
@@ -139,21 +143,20 @@
         & select {
             border-radius: 90px;
             border: 2px solid #498783;
-            background: #FFF;
+            background: #fff;
             height: 40px;
             margin-left: 18px;
-            color: rgba(73, 135, 131, 0.50);
+            color: rgba(73, 135, 131, 0.5);
             padding-left: 15px;
             font-family: Open Sans;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
             line-height: 31px; /* 172.222% */
-            
         }
     }
     ::-webkit-input-placeholder {
-        color: #A4C3C1;
+        color: #a4c3c1;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
