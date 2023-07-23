@@ -13,11 +13,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AddReseach from "./components/Research/Researches/Research/AddReseach/AddReseach";
 import EditReseach from "./components/Research/Researches/Research/EditReseach/EditReseach";
 import MyResearches from "./components/Research/MyReseaches";
+import { AuthProvider } from "./context/AuthContext";
 
 const App = (props) => {
   return (
     <BrowserRouter>
-      <Routes>
+    <AuthProvider>
+    <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Index state={props.state.indexPage} />} />
           <Route path="support" element={<Support />} />
@@ -46,6 +48,8 @@ const App = (props) => {
           <Route path="edit" element={<EditReseach />} />
         </Route>
       </Routes>
+    </AuthProvider>
+      
     </BrowserRouter>
   );
 };

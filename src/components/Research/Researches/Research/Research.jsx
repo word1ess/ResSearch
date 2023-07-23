@@ -1,11 +1,13 @@
+import AuthContext from "../../../../context/AuthContext";
 import "./Research.scss";
-import React from "react";
+import React, { useContext } from "react";
 const Research = (props) => {
-  console.log(props)
   let widthForCount = (props.count * 100) / props.maxCount;
   let researchCountWidth = React.createRef();
   let research = React.createRef();
   let researchContent = React.createRef();
+
+  let { email } = useContext(AuthContext)
 
   const openResearch = () => {
     research.current.classList.toggle("active");
@@ -71,7 +73,7 @@ const Research = (props) => {
               {props.count}/{props.maxCount}
             </p>
           </div>
-          <button className="research-page__btn">Участвовать</button>
+          {email && <button className="research-page__btn">Участвовать</button>}
         </div>
       </div>
     </>
