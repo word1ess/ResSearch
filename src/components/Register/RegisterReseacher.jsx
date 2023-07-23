@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import "./Register.scss";
+import AuthContext from "../../context/AuthContext";
 
 const RegisterReseacher = () => {
+  let { registerUser } = useContext(AuthContext)
   return (
     <div className="container">
-      <form className="form" /* onSubmit={registerUser} */>
+      <form className="form" onSubmit={registerUser}>
         <div className="form__item">
           <label>
             Название компании<span>*</span>
