@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import "./Register.scss";
+import AuthContext from "../../context/AuthContext";
 
 const RegisterRespondent = () => {
+
+  let { registerParticipant } = useContext(AuthContext)
   return (
-    <form className="form" /* onSubmit={registerUser} */>
+    <form className="form" onSubmit={registerParticipant}>
       <div className="form__item">
         <label>
           Имя пользователя<span>*</span>
@@ -20,8 +24,8 @@ const RegisterRespondent = () => {
           Пол<span>*</span>
         </label>
         <select type="text" name="gender">
-          <option>Мужской</option>
-          <option>Женский</option>
+          <option value="0">Мужской</option>
+          <option value="1">Женский</option>
         </select>
       </div>
       <div className="form__address">
@@ -31,7 +35,7 @@ const RegisterRespondent = () => {
             Субъект<span>*</span>
           </label>
           <select type="text" name="subject">
-            <option>Архангельская область</option>
+            <option>Samali</option>
             <option>Амурская область</option>
           </select>
         </div>
@@ -40,7 +44,7 @@ const RegisterRespondent = () => {
             Город<span>*</span>
           </label>
           <select type="text" name="city">
-            <option>Москва</option>
+            <option>London</option>
             <option>Санкт-Петербург</option>
           </select>
         </div>
@@ -50,8 +54,9 @@ const RegisterRespondent = () => {
           Уровень образования<span>*</span>
         </label>
         <select type="text" name="education">
-          <option>Среднее</option>
-          <option>Высшее</option>
+          <option value="0">Среднее</option>
+          <option value="1">Высшее</option>
+          <option value="2">Среднее профессиональное</option>
         </select>
       </div>
       <div className="form__item">
@@ -64,7 +69,7 @@ const RegisterRespondent = () => {
         <label>
           Электронная почта<span>*</span>
         </label>
-        <input type="email" name="email" placeholder="example@mai;.com"></input>
+        <input type="email" name="email" placeholder="example@mail.com"></input>
       </div>
       <div className="form__item">
         <label>

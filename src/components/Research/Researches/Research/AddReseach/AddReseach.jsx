@@ -1,9 +1,12 @@
-import { createRef, useMemo, useState } from "react";
+import { createRef, useContext, useMemo, useState } from "react";
 import "./AddReseach.scss";
 import Stage from "./Stage/Stage";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import AuthContext from "../../../../../context/AuthContext";
 
 const AddReseach = () => {
+  let { user } = useContext(AuthContext)
   let nav = useNavigate();
   let [count, setCount] = useState(1);
   const arr = useMemo(() => new Array(count).fill(), [count]);
@@ -17,6 +20,37 @@ const AddReseach = () => {
   let particepents = createRef()
   let status = createRef()
 
+  let AddResearch = async(e) => {
+    /* e.preventDefault() */
+    await axios
+        .post("http://127.0.0.1:5130/api/study",
+        {
+          "title": name.current.value,
+          "description": description.current.value,
+          "studyArea": city.current.value,
+          "planedParticipantNumber": +particepents.current.value,
+          "duration": +length.current.value,
+          "researcherId": user.userId
+        },
+            {
+                'headers': {
+                    'Content-Type': 'application/json',
+                    /* 'Authorization': `Bearer ${String(authToken.access)}` */
+                }
+            })
+        .then(response => {
+            console.log(response)
+            if (response.status === 201) {
+                /* nav(`/resume/${response.data.id}`, {
+                    state: response.data
+                }) */
+                nav("/research")
+            }
+        }
+        )
+        .catch(error => console.log(error.response))
+}
+
   return (
     <main className="content bg">
       <div className="container">
@@ -25,7 +59,7 @@ const AddReseach = () => {
             <button onClick={() => nav(-1)} className="back">
               Назад
             </button>
-            <button className="save" onClick={() => nav("/research/my")}>Сохранить</button>
+            <button className="save" onClick={() => AddResearch()}>Сохранить</button>
           </div>
           <h1>Создание исследования</h1>
           <div className="add__inputs">
@@ -40,8 +74,8 @@ const AddReseach = () => {
             <div className="add__input">
               <label>Длительность</label>
               <select className="length" ref={length}>
-                <option>Краткосрочное</option>
-                <option>Долгосрочное</option>
+                <option value="0">Краткосрочное</option>
+                <option value="1">Долгосрочное</option>
               </select>
             </div>
             <div className="add__input__requirements">
@@ -64,7 +98,7 @@ const AddReseach = () => {
               </div>
               <div className="add__input">
                 <select className="city" ref={city}>
-                  <option>Архангельская область</option>
+                  <option>Samali</option>
                   <option>Амурская область</option>
                 </select>
               </div>

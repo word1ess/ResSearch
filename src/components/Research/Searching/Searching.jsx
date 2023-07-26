@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import AuthContext from "../../../context/AuthContext";
 
 const Searching = (props) => {
-  let { email } = useContext(AuthContext)
+  let { user } = useContext(AuthContext)
   return (
     <section className="searching">
       <div className="container">
@@ -21,7 +21,7 @@ const Searching = (props) => {
               <img src="image/svgicons/search.svg" alt="search" />
             </button>
           </form>
-          {email && <NavLink to="my" className="searching__link">
+          {user && <NavLink to="my" className="searching__link">
             Мои исследования
           </NavLink>}
         </div>
