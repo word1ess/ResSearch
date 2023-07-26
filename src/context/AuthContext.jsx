@@ -34,14 +34,15 @@ export const AuthProvider = ({ children }) => {
       } else {
           alert('Проверьте логин или пароль')
       }
+      window.location.reload();
   };
 
   let registerParticipant = async (e) => {
     e.preventDefault()
-    /* if (e.target.password1.value !== e.target.password2.value) {
+    if (e.target.password1.value !== e.target.password2.value) {
         alert('Пароли не совпадают')
         return
-    } */
+    }
     let response = await fetch(
         "http://127.0.0.1:5130/api/signup/participant",
         {
@@ -61,16 +62,6 @@ export const AuthProvider = ({ children }) => {
                 "birthDate": "2002-07-10T11:12:42.741Z",
                 "gender": +e.target.gender.value,
                 "educationLevel": +e.target.education.value,
-                /* "regionName": "Samali",
-                "cityName": "London",
-                "phoneNumber": "8912365392",
-                "email": "aboba@aboba.aboba",
-                "password": "Aboba123",
-                "firstName": "aboba",
-                "lastName": "aboba",
-                "birthDate": "2023-07-26T11:12:42.741Z",
-                "gender": 0,
-                "educationLevel": 0, */
             }),
         }
     )

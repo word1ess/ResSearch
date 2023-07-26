@@ -2,6 +2,7 @@ import axios from "axios";
 import "./User.scss";
 import { useContext, useEffect, useState } from "react";
 import AuthContext from "../../context/AuthContext";
+import avatar from "../Research/Researches/Research/avatar.jpg"
 
 const Participant = () => {
     let { user } = useContext(AuthContext);
@@ -25,7 +26,7 @@ const Participant = () => {
     return (
         <div className="user__row">
               <div className="user__img">
-                <img /* src={props.state.userInfo.image}  */alt="" />
+                <img src={avatar} alt="" />
               </div>
               <div /* ref={userInfo}  */className="user__info">
                 <header className="user__header">
@@ -52,7 +53,7 @@ const Participant = () => {
                 </div>
                 <div className="user__characteristic">
                   <p>Дата рождения</p>
-                  <p className="hidden">{profile?.birthDay}</p>
+                  <p className="hidden">{profile?.birthDay.split("T")[0]}</p>
                   
                 </div>
                 <div className="user__characteristic">

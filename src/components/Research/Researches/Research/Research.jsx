@@ -3,6 +3,7 @@ import AuthContext from "../../../../context/AuthContext";
 import "./Research.scss";
 import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import avatar from "./avatar.jpg"
 
 const Research = (props) => {
   let [countOfParticipants, setCountOfParticipants] = useState([])
@@ -58,7 +59,7 @@ const Research = (props) => {
         onClick={openResearch}
       >
         <div className="research__img">
-          <img src="image/image/main/1" alt="" />
+          <img src={avatar} alt="" />
         </div>
         <div className="research__text">
           <h3>УрФУ</h3>
@@ -84,7 +85,7 @@ const Research = (props) => {
           <div className="research-page__info">
             <div className="research-page__owner">
               <div className="research__img">
-                <img src="image/image/main/1" alt="" />
+                <img src={avatar} alt="" />
               </div>
               <h3>УрФУ</h3>
             </div>

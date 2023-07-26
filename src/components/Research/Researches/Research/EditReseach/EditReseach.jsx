@@ -58,7 +58,7 @@ const EditReseach = (props) => {
       <div className="container">
         <div className="add">
           <div className="add__btns">
-            <button className="back">Назад</button>
+            <button className="back" onClick={() => nav(-1)}>Назад</button>
             <button className="save" onClick={() => EditResearch()}>Сохранить</button>
           </div>
           <h1>Редактирование исследования</h1>
