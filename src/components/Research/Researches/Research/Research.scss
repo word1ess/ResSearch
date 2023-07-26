@@ -113,7 +113,7 @@
     -webkit-transition: height 0.7s ease;
 
     &.active {
-        height: 650px;
+        height: auto;
         -webkit-transition: height 0.7s ease;
     }
 
@@ -193,7 +193,7 @@ margin-right: 10px;
         font-weight: 600;
         line-height: 33px;
         margin: 0 auto;
-
+        width: 300px;
         transition: all 300ms ease;
 
         &:hover {

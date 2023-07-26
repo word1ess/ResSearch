@@ -3,9 +3,9 @@ import "./Register.scss";
 import AuthContext from "../../context/AuthContext";
 
 const RegisterReseacher = () => {
-  let { registerUser } = useContext(AuthContext);
+  let { registerResearcher } = useContext(AuthContext);
   return (
-    <form className="form" onSubmit={registerUser}>
+    <form className="form" onSubmit={registerResearcher}>
       <div className="form__item">
         <label>
           Название компании<span>*</span>
@@ -25,7 +25,7 @@ const RegisterReseacher = () => {
             Субъект<span>*</span>
           </label>
           <select type="text" name="subject">
-            <option>Архангельская область</option>
+            <option>Samali</option>
             <option>Амурская область</option>
           </select>
         </div>
@@ -34,7 +34,7 @@ const RegisterReseacher = () => {
             Город<span>*</span>
           </label>
           <select type="text" name="city">
-            <option>Москва</option>
+            <option>London</option>
             <option>Санкт-Петербург</option>
           </select>
         </div>

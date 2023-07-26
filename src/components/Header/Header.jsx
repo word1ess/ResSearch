@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 
 const Header = () => {
-  let { email } = useContext(AuthContext)
+  let { user } = useContext(AuthContext)
   let { logoutUser } = useContext(AuthContext)
   return (
     <header className="header">
@@ -25,13 +25,13 @@ const Header = () => {
             <li className="header__link">
               <NavLink to="support">Поддержка</NavLink>
             </li>
-            {email && <li className="header__link">
+            {user && <li className="header__link">
               <NavLink to="user" className="profile">Профиль</NavLink>
             </li>}
-            {!email && <li className="header__link">
+            {!user && <li className="header__link">
               <NavLink to="login">Войти</NavLink>
             </li>}
-            {email && <li className="header__link">
+            {user && <li className="header__link">
               <NavLink to="/" onClick={logoutUser}>Выйти</NavLink>
             </li>}
           </ul>

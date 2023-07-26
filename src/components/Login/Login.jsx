@@ -21,11 +21,11 @@ const Login = () => {
             <div className="login__input passwd">
               <div>
                 <label>Пароль</label>
-                <input name="password"></input>
+                <input name="password" type="password"></input>
               </div>
               <p>Забыли пароль?</p>
             </div>
-            <button className="login__btn" type="submit" to="/research"  onClick={() => setSuccess(success => !success)}>Войти</button>
+            <button className="login__btn" type="submit" to="/research"  /* onClick={() => setSuccess(success => !success)} */>Войти</button>
             <div className="login__register">
               Нет аккаунта? <NavLink to="/register">Зарегистрироваться</NavLink>
             </div>

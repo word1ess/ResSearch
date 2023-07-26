@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Intro.scss";
 
 const Intro = (props) => {
@@ -10,9 +11,9 @@ const Intro = (props) => {
               Проводите исследования с гарантированным качеством участников и
               присоединяйтесь к тысячам исследователей
             </p>
-            <a href="#" className="link-bg">
+            <NavLink to="/login" className="link-bg">
               Начать
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>
