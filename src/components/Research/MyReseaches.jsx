@@ -8,31 +8,36 @@ import AuthContext from "../../context/AuthContext";
 import Research from "./Researches/Research/Research";
 
 const MyResearches = () => {
-  let [researches, setResearches] = useState([])
-  let { user } = useContext(AuthContext)
+  let [researches, setResearches] = useState([]);
+  let { user } = useContext(AuthContext);
   function filter(research) {
-    return research.researcherId === user.userId 
+    return research.researcherId === user.userId;
   }
   async function fetchResearches() {
-    await axios.get('http://localhost:5130/api/study',{
-      'headers': {
-        'Accept': "*/*",
-        'Content-Type': 'application/json;charset=UTF-8',
-      }},
-      ).then(response => {
-        console.log(response.data)
-        setResearches(response.data)
-      })
+    let response = await axios({
+      method: "get",
+      url: "http://localhost:5130/api/study",
+      headers: {
+        Accept: "*/*",
+        "Content-Type": "application/json;charset=UTF-8",
+      },
+      params: {
+        userId: user.userId,
+      },
+    });
+    let data = await response
+    setResearches(data.data)
+    console.log(data.data)
   }
-  
-  if (user.userType === "Researcher") {
-    var myResearches = researches.filter(filter).map((research) => {
+
+    var myResearches = researches.map((research) => {
       return (
         <Research
           id={research.id}
           researcherId={research.researcherId}
           title={research.title}
           createdAt={research.createdAt}
+          image={"https://pixelbox.ru/wp-content/uploads/2022/08/avatars-viber-pixelbox.ru-16.jpg"}
           duration={research.duration}
           studyArea={research.studyArea}
           description={research.description}
@@ -41,11 +46,11 @@ const MyResearches = () => {
         />
       );
     });
-  }
-console.log(myResearches)
+  
+  console.log(myResearches);
   useLayoutEffect(() => {
-    fetchResearches()
-  }, [])
+    fetchResearches();
+  }, []);
   return (
     <main className="content bg">
       <section className="searching">
@@ -76,17 +81,19 @@ console.log(myResearches)
             <p>Заверешнные</p>
             <p>Архив</p>
           </div>
-          {user.userType === "Researcher" && <NavLink to="/add" className="add-btn" />}
+          {user.userType === "Researcher" && (
+            <NavLink to="/add" className="add-btn" />
+          )}
         </div>
       </div>
 
       {/* <Researches researches={myResearches}></Researches> */}
-      
+
       <section className="researches">
-      <div className="container">
-        <div className="researches__items">{myResearches}</div>
-      </div>
-    </section>
+        <div className="container">
+          <div className="researches__items">{myResearches}</div>
+        </div>
+      </section>
     </main>
   );
 };
